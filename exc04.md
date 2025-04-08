@@ -1,3 +1,5 @@
+Luvussa JavaScriptia sisältävän sivun lataaminen - kertaus kuvataan sekvenssikaavion) avulla sivun https://studies.cs.helsinki.fi/exampleapp/notes avaamisen aikaansaama tapahtumasarja.
+
 ```mermaid
 sequenceDiagram
     participant browser
@@ -9,7 +11,7 @@ sequenceDiagram
     server-->>browser: Vastataan statuksella 302 (redirect)
     deactivate server
     
-    browser->>server: uusi GET palvelimelle osoitteeseen notes (Location sijaintiin)
+    browser->>server: 4x uusi GET palvelimelle osoitteeseen notes (Location sijaintiin)
     activate server
     server-->>browser: vastataan lähettämällä notes sivu
     server-->>browser: vastataan lähettämällä main.css
